@@ -1,0 +1,45 @@
+.same--section {
+   display: flex;
+   justify-content: space-between;
+}
+
+ .left--section  {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  column-gap: 10px;
+ }
+
+ .left--section button {
+   width: 60px;
+   padding: 5px 5px;
+   border-radius: 6px;
+   font-weight: bold;
+ }
+
+ .publish {
+   border: 1px solid rgb(85, 194, 231);
+   color: rgb(85, 194, 231);
+   background-color: rgb(225, 245, 251);
+ }
+
+ .delete {
+   border: 1px solid rgb(224, 30, 62);
+   color: rgb(224, 30, 62);
+   background-color: rgb(252, 242, 243);
+ }
+
+ .search {
+   padding: 10px 10px;
+   text-indent: 10px;
+   width: 250px;
+   border: none;
+   box-shadow: -1px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 6px;
+   margin-right: -20px;
+ }
+
+ .search::placeholder {
+   color: rgb(163, 161, 161);
+ }
+
