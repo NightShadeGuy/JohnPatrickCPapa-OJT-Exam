@@ -5,9 +5,10 @@ import jsonData from "./MOCK_DATA.json"
 
 export default function App() {
   const [data, setData] = useState(jsonData);
+  const [search, setSearch] = useState("");
   //const [listIndex, setListIndex] = useState([]); 
   //console.log(data);
-
+  
   const updatedItems = [...data];
 
   function handleDelete(index, show) {
@@ -21,11 +22,15 @@ export default function App() {
 
   function handleRemove() {
     updatedItems.shift();
-    setData(updatedItems);
-    
+    setData(updatedItems); 
   }
 
-  const readList = data.map((data, index) => {
+  const handleSearch = (e) => {
+    const { value } = e.target;
+    setSearch(value);
+  }
+
+  const readList = data.filter(data => data.title.toLowerCase().includes(search)).map((data, index) => {
     return (
               <ReadFull  key={data.id}
                          id={data.id}
@@ -41,7 +46,9 @@ export default function App() {
 
     return (
       <div className="container">
-          <Header  handleRemove={handleRemove} />
+          <Header  handleRemove={handleRemove}
+                   handleSearch={handleSearch} 
+          />
           {readList}
       </div>
     )

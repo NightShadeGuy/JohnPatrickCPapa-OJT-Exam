@@ -37,8 +37,6 @@ export default function ReadFull(props) {
          //console.log(show);
     }
 
-
-
     return (
         <div className="read--container" key={props.id}>
              

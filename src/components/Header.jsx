@@ -11,7 +11,7 @@ export default function Header(props) {
                     <button className="publish">Publish</button>
                     <button className="delete" onClick={props.handleRemove}>Delete</button>
                 </div>
-                <input type="text" className="search" placeholder="Search..."/>
+                <input type="text" className="search" placeholder="Search..." onChange={props.handleSearch}/>
             </div>
         </div>
     )
